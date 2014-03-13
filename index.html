@@ -1,1 +1,24 @@
-[File has been changed]
+<html>
+  <head>
+	<title>Device Properties Example</title>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("deviceready", onDeviceReady, false);
+		//function onDeviceReady() {
+		 //   console.log(device.cordova);
+		//}
+		function onDeviceReady(){
+			var element = document.getElementByID('deviceProperties');
+			element.innerHTML = 'Device Name: ' 		+ device.name 		+ '<br />' + 
+								'Device Cordova: ' 		+ device.cordova 	+ '<br />' +
+								'Device Platform: ' 	+ device.platform 	+ '<br />' +
+								'Device UUID: ' 		+ device.uuid 		+ '<br />' +
+								'Device Model: ' 		+ device.model 		+ '<br />' +
+								'Device Variation: ' 	+ device.variation 	+ '<br />';
+		}
+	</script>
+  </head>
+  <body>
+	<p id="devicdProperties">Loading device properties...</p>
+  </body>
+</html>  
